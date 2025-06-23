@@ -1,0 +1,19 @@
+ignore-empty-password
+daemonize
+show-failed-attempts
+indicator-idle-visible
+line-uses-ring
+font=JetBrainsMono Nerd Font
+indicator-radius=100
+indicator-thickness=15
+color=1e1e2e
+key-hl-color=b7bdf8
+ring-color=313244
+inside-color=1e1e2e
+inside-ver-color=b7bdf8
+ring-ver-color=b7bdf8
+text-color=b7bdf8
+text-caps-lock-color=b7bdf8
+ring-wrong-color=313244
+inside-wrong-color=313244
+text-wrong-color=b7bdf8
