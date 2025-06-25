@@ -390,6 +390,7 @@ binds {
     Mod+F3 hotkey-overlay-title="File Manager: nautilus" { spawn "nautilus"; }
     Mod+F4 hotkey-overlay-title="OBS Studio: obs" { spawn "obs"; }
     Mod+Shift+V hotkey-overlay-title="Clipboard manager: cliphist" {spawn "bash" "-c" "$HOME/.config/niri/scripts/cliphist-fuzzel-img";}
+    Mod+Space hotkey-overlay-title="Toggle bar: waybar" { spawn "bash" "-c" "$HOME/.config/niri/scripts/toggle-waybar.sh"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -398,7 +399,8 @@ binds {
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true {spawn "bash" "-c" "$HOME/.config/niri/scripts/volume_up.sh";}
-    XF86AudioLowerVolume allow-when-locked=true {spawn "bash" "-c" "$HOME/.config/niri/scripts/volume_down.sh";}
+    // XF86AudioLowerVolume allow-when-locked=true {spawn "bash" "-c" "$HOME/.config/niri/scripts/volume_down.sh";}
+    XF86AudioLowerVolume allow-when-locked=true {spawn "volumectl" "-b" "-u" "-d" "down";}
     // XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     // XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
