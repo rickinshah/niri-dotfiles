@@ -382,7 +382,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+A hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+A hotkey-overlay-title="Run an Application: fuzzel" { spawn "bash" "-c" "pgrep fuzzel && pkill fuzzel || fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+Backspace hotkey-overlay-title="Logout: wlogout" { spawn "wlogout"; }
     Mod+F1 hotkey-overlay-title="Text Editor: neovide" { spawn "neovide"; }
@@ -391,6 +391,7 @@ binds {
     Mod+F4 hotkey-overlay-title="OBS Studio: obs" { spawn "obs"; }
     Mod+Shift+V hotkey-overlay-title="Clipboard manager: cliphist" {spawn "bash" "-c" "$HOME/.config/niri/scripts/cliphist-fuzzel-img";}
     Mod+Space hotkey-overlay-title="Toggle bar: waybar" { spawn "bash" "-c" "$HOME/.config/niri/scripts/toggle-waybar.sh"; }
+    Mod+N hotkey-overlay-title="Toggle Notification: swaync" { spawn "swaync-client" "-t"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
