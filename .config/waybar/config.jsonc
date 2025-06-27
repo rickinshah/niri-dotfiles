@@ -168,7 +168,7 @@
             "",
             ""
         ],
-        "interval": 10
+        "interval": 1
     },
     "battery#bat2": {
         "bat": "BAT2"
