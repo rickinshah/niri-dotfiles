@@ -4,5 +4,5 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=%h/.config/niri/scripts/waybar-auto-visibility.sh
+ExecStart=%h/.config/niri/scripts/auto-hide-waybar
 Restart=on-failure
