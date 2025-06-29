@@ -388,7 +388,7 @@ binds {
     Mod+F2 hotkey-overlay-title="Browser: zen" { spawn "zen-browser"; }
     Mod+F3 hotkey-overlay-title="File Manager: nautilus" { spawn "nautilus"; }
     Mod+F4 hotkey-overlay-title="OBS Studio: obs" { spawn "obs"; }
-    Mod+Shift+V hotkey-overlay-title="Clipboard manager: cliphist" {spawn "bash" "-c" "$HOME/.config/niri/scripts/cliphist-fuzzel-img";}
+    Mod+Shift+V hotkey-overlay-title="Clipboard manager: cliphist" {spawn "bash" "-c" "pgrep fuzzel && pkill fuzzel || $HOME/.config/niri/scripts/cliphist-fuzzel-img";}
     Mod+Space hotkey-overlay-title="Toggle bar: waybar" { spawn "bash" "-c" "$HOME/.config/niri/scripts/toggle-waybar.sh"; }
     Mod+N hotkey-overlay-title="Toggle Notification: swaync" { spawn "swaync-client" "-t"; }
 
@@ -636,7 +636,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+E { quit; }
+    // Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
