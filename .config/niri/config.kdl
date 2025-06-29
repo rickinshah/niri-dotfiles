@@ -133,9 +133,8 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-        proportion 0.8
-
-        proportion 1.0
+        proportion 0.75
+        proportion 0.9
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
     }
@@ -335,7 +334,7 @@ window-rule {
 
 window-rule {
     match app-id=r#"zen$"#
-    default-column-width {proportion 0.8;}
+    default-column-width {proportion 0.9;}
 }
 
 // Example: block out two password managers from screen capture.
@@ -404,7 +403,8 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true {spawn "volumectl" "-b" "-u" "-d" "down";}
     // XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     // XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMute allow-when-locked=true { spawn "volumectl" "-d" "toggle-mute";}
+    // XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
     XF86AudioNext allow-when-locked=true {spawn "playerctl" "next";}
