@@ -100,6 +100,7 @@ func toggleWaybar() error {
 }
 
 const stateFile = "/tmp/waybar-visible"
+const lockFile = "/tmp/waybar-lock"
 
 func showWaybar() error {
 	if _, err := os.Stat(stateFile); os.IsNotExist(err) {
@@ -140,6 +141,13 @@ func showOrHideWaybarBasedOnWindows() error {
 	return hideWaybar()
 }
 
+func waybarLocked() bool {
+	if _, err := os.Stat(lockFile); err == nil {
+		return true
+	}
+	return false
+}
+
 func main() {
 	overviewMode := false
 
@@ -172,34 +180,36 @@ func main() {
 		}
 
 		for eventType, eventValue := range event {
-			if allowedEvents[eventType] && !overviewMode {
-				if err := showOrHideWaybarBasedOnWindows(); err != nil {
-					log.Println(err)
-				}
-				break
-			} else if eventType == "OverviewOpenedOrClosed" {
-				overview, ok := eventValue.(map[string]any)
-				if !ok {
-					log.Println("eventValue is not a map[string]any")
+			if !waybarLocked() {
+				if allowedEvents[eventType] && !overviewMode {
+					if err := showOrHideWaybarBasedOnWindows(); err != nil {
+						log.Println(err)
+					}
 					break
-				}
+				} else if eventType == "OverviewOpenedOrClosed" {
+					overview, ok := eventValue.(map[string]any)
+					if !ok {
+						log.Println("eventValue is not a map[string]any")
+						break
+					}
 
-				isOpen, exists := overview["is_open"]
-				if !exists {
-					log.Println("is_open key is missing")
-					break
-				}
+					isOpen, exists := overview["is_open"]
+					if !exists {
+						log.Println("is_open key is missing")
+						break
+					}
 
-				overviewMode, ok = isOpen.(bool)
-				if !ok {
-					log.Println("is_open is not a bool")
-					break
-				}
+					overviewMode, ok = isOpen.(bool)
+					if !ok {
+						log.Println("is_open is not a bool")
+						break
+					}
 
-				if overviewMode {
-					_ = showWaybar()
-				} else {
-					_ = showOrHideWaybarBasedOnWindows()
+					if overviewMode {
+						_ = showWaybar()
+					} else {
+						_ = showOrHideWaybarBasedOnWindows()
+					}
 				}
 			}
 		}

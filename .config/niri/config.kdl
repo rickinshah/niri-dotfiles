@@ -391,6 +391,7 @@ binds {
     Mod+Shift+V hotkey-overlay-title="Clipboard manager: cliphist" {spawn "bash" "-c" "pgrep fuzzel && pkill fuzzel || $HOME/.config/niri/scripts/cliphist-fuzzel-img";}
     Mod+Space hotkey-overlay-title="Toggle bar: waybar" { spawn "bash" "-c" "$HOME/.config/niri/scripts/toggle-waybar.sh"; }
     Mod+N hotkey-overlay-title="Toggle Notification: swaync" { spawn "swaync-client" "-t"; }
+    Mod+Shift+Space hotkey-overlay-title="Lock bar: waybar" { spawn "bash" "-c" "$HOME/.config/niri/scripts/lock-waybar.sh"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
