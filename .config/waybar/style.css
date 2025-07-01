@@ -19,6 +19,13 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
+#workspaces {
+    margin: 4px 0px 4px 0px;
+    background-color: #313244;
+    border-radius: 15px;
+    padding: 0 10px 0 5px;
+}
+
 /*
 window#waybar.empty {
     background-color: transparent;
@@ -54,6 +61,7 @@ button:hover {
     margin: 0 0px;
     padding: 0 0px;
     background-color: transparent;
+    min-width: 20px;
 }
 
 #workspaces button:hover {
@@ -115,7 +123,6 @@ button:hover {
 #wireplumber,
 #privacy,
 #custom-media,
-#workspaces,
 #mode,
 #scratchpad,
 #mpd {

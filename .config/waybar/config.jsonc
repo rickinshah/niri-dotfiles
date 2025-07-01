@@ -10,7 +10,7 @@
     "modules-left": [
         "custom/launcher",
         // "wlr/taskbar",
-        // "niri/workspaces",
+        "niri/workspaces",
         "mpris"
     ],
     "modules-center": [
@@ -33,9 +33,6 @@
             "default": "",
             "active": ""
         },
-        // "persistent-workspaces": {
-        //     "*": 5
-        // }
     },
     "keyboard-state": {
         "numlock": true,
