@@ -5,6 +5,7 @@ fuzzel
 avizo
 pamixer
 cliphist
+direnv
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
 polkit-kde-agent

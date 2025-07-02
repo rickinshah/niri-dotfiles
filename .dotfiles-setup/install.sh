@@ -14,16 +14,14 @@ fi
 rm -rf ~/yay
 
 # Install required packages
-if [[ -f ~/.dotfiles-setup/packages.txt ]]; then
+if [[ -f ~/niri-dotfiles/.dotfiles-setup/packages.txt ]]; then
     yay -S --needed --noconfirm $(< ~/.dotfiles-setup/packages.txt)
 else
     echo "packages.txt not found"
     exit 1
 fi
 
-# Clone the repo
-git clone https://github.com/rickinshah/niri-dotfiles.git
-mv -f ~/niri-dotfiles/.config/* ~/.config
+cp -rf ~/niri-dotfiles/.config/* ~/.config
 
 # Clone the catppuccin-gtk-theme
 git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git ~/themes-temp
