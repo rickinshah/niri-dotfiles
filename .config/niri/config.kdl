@@ -8,6 +8,10 @@ environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
@@ -107,6 +111,7 @@ input {
     // automatically.
     position x=1280 y=0
 }
+
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
