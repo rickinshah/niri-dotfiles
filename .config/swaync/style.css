@@ -3,6 +3,8 @@
 
 * {
   font-family: Cantarell;
+  min-height: 10px;
+  min-width: 10px;
 }
 
 .control-center .notification-row:focus,
@@ -97,6 +99,7 @@
   border-radius: 0px;
   border-top: none;
   border-right: none;
+  margin: 0px;
 }
 
 /* add bottom border radius to eliminate clipping */
