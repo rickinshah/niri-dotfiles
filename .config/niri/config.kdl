@@ -9,7 +9,7 @@ environment {
 }
 
 cursor {
-    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-theme "catppuccin-mocha-dark-cursors"
 }
 
 // Input device configuration.
@@ -339,6 +339,22 @@ window-rule {
 
 window-rule {
     match app-id=r#"zen$"#
+    default-column-width {proportion 0.9;}
+}
+
+window-rule {
+    match app-id=r#"QtScrcpy$"# title="^Phone-+"
+    default-column-width {proportion 0.25;}
+}
+
+window-rule {
+    match app-id=r#"QtScrcpy$"# title="^Tool$"
+    open-floating false
+    default-column-width {}
+}
+
+window-rule {
+    match app-id=r#"chromium$"#
     default-column-width {proportion 0.9;}
 }
 
