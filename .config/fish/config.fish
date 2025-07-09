@@ -2,8 +2,19 @@ alias ls='eza -1 --color=always --icons=always --hyperlink --group-directories-f
 alias cat='bat'
 alias rm='rm -i'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias cd='z'
+zoxide init fish | source
 direnv hook fish | source
 if status is-interactive
+
+    function fish_command_not_found
+        if type -q yay
+            echo "Command '$argv' not found. Searching in packages..."
+            pacman -F $argv
+        else
+            echo "Command '$argv' not found and 'yay' is not installed."
+        end
+    end
     # Commands to run in interactive sessions can go here
     function auto_activate_venv --on-variable PWD
         if test -f .venv/bin/activate.fish

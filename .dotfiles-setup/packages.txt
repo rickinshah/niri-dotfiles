@@ -28,6 +28,7 @@ sddm
 gtk-engine-murrine
 sassc
 dconf
+zoxide
 playerctl
 ttf-indic-otf
 ttf-font-awesome
