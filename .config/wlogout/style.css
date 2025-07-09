@@ -2,31 +2,31 @@
     font-family: "JetBrainsMono Nerd Font";
     font-size: 17px;
     color: #b7bdf8;
-    border: none;
+    box-shadow: none;
 }
 
 window {
-    background-color: #1e1e2e;
+    /* background-color: #1e1e2e; */
+    background-color: rgba(30, 30, 46, 0.9);
     padding: 15px;
     /* border-radius: 100px; */
 }
 
 button {
     color: #ffffff;
-    background-color: #313244;
+    background-color: #1e1e2e;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30%;
     padding: 12px;
     transition: all 0.4s ease;
     border-radius: 0px;
-    border: none;
 }
 
 button:focus,
 button:active,
 button:hover {
-    background-color: #45475a;
+    background-color: #313244;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30%;
@@ -36,27 +36,37 @@ button:hover {
 #lock {
     background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
     border-radius: 10 0 0 0px;
+    border-top: 2px solid #b7bdf8;
+    border-left: 2px solid #b7bdf8;
 }
 
 #logout {
     background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+    border-top: 2px solid #b7bdf8;
 }
 
 #suspend {
     background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
     border-radius: 0 10 0 0px;
+    border-top: 2px solid #b7bdf8;
+    border-right: 2px solid #b7bdf8;
 }
 
 #hibernate {
     background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
     border-radius: 0 0 0 10px;
+    border-left: 2px solid #b7bdf8;
+    border-bottom: 2px solid #b7bdf8;
 }
 
 #shutdown {
     background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    border-bottom: 2px solid #b7bdf8;
 }
 
 #reboot {
     background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
     border-radius: 0 0 10 0px;
+    border-bottom: 2px solid #b7bdf8;
+    border-right: 2px solid #b7bdf8;
 }

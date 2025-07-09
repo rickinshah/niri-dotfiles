@@ -12,6 +12,11 @@ cursor {
     xcursor-theme "catppuccin-mocha-dark-cursors"
 }
 
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
@@ -120,6 +125,8 @@ layout {
     // Set gaps around windows in logical pixels.
     gaps 4
 
+    background-color "transparent"
+
     always-center-single-column
 
     // When to center a column when changing focus, options are:
@@ -148,9 +155,9 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    // default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
-    // default-column-width {}
+    default-column-width {}
 
     // By default focus ring and border are rendered as a solid background rectangle
     // behind windows. That is, they will show up through semitransparent windows.
@@ -204,8 +211,8 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         off
 
-        width 4
-        active-color "#ffc87f"
+        // width 2
+        active-color "#b7bdf8"
         inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
@@ -318,7 +325,12 @@ window-rule {
 }
 
 window-rule {
+    draw-border-with-background false
+}
+
+window-rule {
     match app-id=r#"^org\.kde\.kdeconnect\.daemon$"#
+    match app-id=r#"^galculator$"#
     open-floating true
 }
 
@@ -339,7 +351,21 @@ window-rule {
 
 window-rule {
     match app-id=r#"zen$"#
+    match app-id=r#"chromium$"#
     default-column-width {proportion 0.9;}
+}
+
+window-rule {
+    match app-id=r#"neovide$"#
+    match app-id=r#"zed$"#
+    match app-id=r#"jetbrains-idea$"#
+    
+    default-column-width {proportion 0.75;}
+}
+
+window-rule {
+    match app-id=r#"org.pwmt.zathura"#
+    default-column-width {proportion 0.66667;}
 }
 
 window-rule {
@@ -353,10 +379,9 @@ window-rule {
     default-column-width {}
 }
 
-window-rule {
-    match app-id=r#"chromium$"#
-    default-column-width {proportion 0.9;}
-}
+// window-rule {
+//     default-column-width {proportion 0.9;}
+// }
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
@@ -413,6 +438,7 @@ binds {
     Mod+Space hotkey-overlay-title="Toggle bar: waybar" { spawn "bash" "-c" "$HOME/.config/niri/scripts/toggle-waybar.sh"; }
     Mod+N hotkey-overlay-title="Toggle Notification: swaync" { spawn "swaync-client" "-t"; }
     Mod+Shift+Space hotkey-overlay-title="Lock bar: waybar" { spawn "bash" "-c" "$HOME/.config/niri/scripts/lock-waybar.sh"; }
+    XF86Calculator hotkey-overlay-title="Calculator: galculator" { spawn "galculator";}
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.

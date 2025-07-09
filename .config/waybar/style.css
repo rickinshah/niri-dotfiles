@@ -8,6 +8,7 @@
 window#waybar {
     /*background-color: rgba(0, 0, 0, 1);*/
     background-color: #1e1e2e;
+    background-color: transparent;
     color: #cdd6f4;
     transition-property: background-color;
     transition-duration: 0.5s;
@@ -21,7 +22,7 @@ window#waybar.hidden {
 
 #workspaces {
     margin: 4px 0px 4px 0px;
-    background-color: #313244;
+    background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 10px 0 5px;
 }
@@ -92,7 +93,7 @@ button:hover {
 #custom-notification.notification,
 #custom-notification.dnd-none,
 #custom-notification.dnd-notification {
-    background-color: #313244;
+    background-color: #1e1e2e;
     border: #89b4fa;
     margin: 3px;
     border-radius: 15px;
@@ -100,7 +101,7 @@ button:hover {
 }
 
 #custom-notification {
-    background-color: #313244;
+    background-color: #1e1e2e;
     border: #89b4fa;
     margin: 3px;
     border-radius: 15px;
@@ -127,14 +128,14 @@ button:hover {
 #scratchpad,
 #mpd {
     margin: 4px 0px 4px 0px;
-    background-color: #313244;
+    background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 10px 0 10px;
 }
 
 #custom-vkeyboard {
     margin: 4px 0px 4px 0px;
-    background-color: #313244;
+    background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 10px 0 12px;
 
@@ -177,7 +178,7 @@ button:hover {
 #battery.plugged {
     /* color: #bac2de; */
     margin: 4px 0px 4px 0px;
-    background-color: #313244;
+    background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 10px 0 10px;
 }
@@ -195,12 +196,12 @@ button:hover {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    background-color: #313244;
+    background-color: #1e1e2e;
 }
 
 #battery.warning:not(.charging) {
     color: orange;
-    background-color: #313244;
+    background-color: #1e1e2e;
 }
 
 label:focus {
@@ -264,14 +265,14 @@ label:focus {
 
 #custom-power {
     margin: 4px 5px 4px 0px;
-    background-color: #313244;
+    background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 15px 0 12px;
 }
 
 #custom-launcher {
     margin: 4px 0px 4px 5px;
-    background-color: #313244;
+    background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 8px 0 11px;
 }

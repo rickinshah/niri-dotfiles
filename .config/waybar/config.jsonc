@@ -274,7 +274,7 @@
         "tooltip": false,
         "format": "{icon}",
         "format-icons": {
-            "notification": "\uF0A2<span foreground='red'><sup>\uF444</sup></span>",
+            "notification": "\uF0A2<span foreground='#b7bdf8'><sup>\uF444</sup></span>",
             "none": "\uF0A2 ",
             "dnd-notification": "\uF1F7<span foreground='red'><sup>\uF444</sup></span>",
             "dnd-none": "\uF1F7 ",
