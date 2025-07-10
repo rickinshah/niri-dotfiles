@@ -82,13 +82,30 @@ func countWindowsInWorkspaceID(workspaceID int) (int, error) {
 	return count, nil
 }
 
+func countTiledWindowsInWorkspaceID(workspaceID int) (int, error) {
+	windows, err := getWindows()
+	if err != nil {
+		return -1, err
+	}
+
+	count := 0
+
+	for _, window := range windows {
+		if window.WorkspaceID == workspaceID && window.IsFloating == false {
+			count++
+		}
+	}
+
+	return count, nil
+}
+
 func countWindowInCurrentWorkspace() (int, error) {
 	workspace, err := getCurrentWorkspace()
 	if err != nil {
 		return -1, err
 	}
 
-	count, err := countWindowsInWorkspaceID(workspace.ID)
+	count, err := countTiledWindowsInWorkspaceID(workspace.ID)
 	if err != nil {
 		return -1, err
 	}
