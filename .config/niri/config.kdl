@@ -359,6 +359,7 @@ window-rule {
     match app-id=r#"neovide$"#
     match app-id=r#"zed$"#
     match app-id=r#"jetbrains-idea$"#
+    match app-id=r#"codium"#
     
     default-column-width {proportion 0.75;}
 }
