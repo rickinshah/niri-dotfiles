@@ -1,0 +1,8 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=wlsunset -S 7:00 -s 19:00 -d 120
+Restart=on-failure
