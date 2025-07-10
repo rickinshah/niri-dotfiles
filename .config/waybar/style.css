@@ -2,7 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: JetBrainsMono Nerd Font;
     font-size: 14px;
-    color: #b7bdf8;
+    color: #b4befe;
 }
 
 window#waybar {
@@ -21,7 +21,7 @@ window#waybar.hidden {
 }
 
 #workspaces {
-    margin: 4px 0px 4px 0px;
+    /* margin: 4px 0px 4px 0px; */
     background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 10px 0 5px;
@@ -66,7 +66,8 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: rgba(38, 51, 85, 0.5);
+    /* background: rgba(38, 51, 85, 0.5); */
+    background: transparent;
 }
 
 #workspaces button.active {
@@ -95,7 +96,7 @@ button:hover {
 #custom-notification.dnd-notification {
     background-color: #1e1e2e;
     border: #89b4fa;
-    margin: 3px;
+    /* margin: 3px; */
     border-radius: 15px;
     padding: 0px 9px 0px 9px;
 }
@@ -103,7 +104,7 @@ button:hover {
 #custom-notification {
     background-color: #1e1e2e;
     border: #89b4fa;
-    margin: 3px;
+    /* margin: 3px; */
     border-radius: 15px;
     padding: 0px 4px 0px 9px;
 }
@@ -127,7 +128,7 @@ button:hover {
 #mode,
 #scratchpad,
 #mpd {
-    margin: 4px 0px 4px 0px;
+    /* margin: 4px 0px 4px 0px; */
     background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 10px 0 10px;
@@ -171,13 +172,14 @@ button:hover {
 #pulseaudio:hover,
 #backlight:hover,
 #clock:hover {
-    background-color: #45475a;
+    transition: all 0.3s ease-in;
+    text-shadow: 0 0 2px #c9cdff;
 }
 
 #battery.charging,
 #battery.plugged {
     /* color: #bac2de; */
-    margin: 4px 0px 4px 0px;
+    /* margin: 4px 0px 4px 0px; */
     background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 10px 0 10px;
@@ -185,12 +187,12 @@ button:hover {
 
 @keyframes blink {
     to {
-        color: #ffffff;
+        color: #f53c3c;
     }
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
+    color: #b4befe;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -264,14 +266,14 @@ label:focus {
 }
 
 #custom-power {
-    margin: 4px 5px 4px 0px;
+    /* margin: 4px 5px 4px 0px; */
     background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 15px 0 12px;
 }
 
 #custom-launcher {
-    margin: 4px 0px 4px 5px;
+    /* margin: 4px 0px 4px 5px; */
     background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 8px 0 11px;

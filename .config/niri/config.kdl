@@ -430,7 +430,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+A hotkey-overlay-title="Run an Application: fuzzel" { spawn "bash" "-c" "pgrep fuzzel && pkill fuzzel || fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+Backspace hotkey-overlay-title="Logout: wlogout" { spawn "bash" "-c" "pgrep wlogout && pkill wlogout || wlogout"; }
+    Mod+Backspace hotkey-overlay-title="Logout: wlogout" { spawn "bash" "-c" "pgrep wlogout && pkill wlogout || wlogout -c 15 -b 6 -m 400"; }
     Mod+F1 hotkey-overlay-title="Text Editor: neovide" { spawn "neovide"; }
     Mod+F2 hotkey-overlay-title="Browser: zen" { spawn "zen-browser"; }
     Mod+F3 hotkey-overlay-title="File Manager: nautilus" { spawn "nautilus"; }

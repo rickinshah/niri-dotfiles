@@ -6,67 +6,48 @@
 }
 
 window {
-    /* background-color: #1e1e2e; */
-    background-color: rgba(30, 30, 46, 0.9);
+    background-color: rgba(30, 30, 46, 0.8);
     padding: 15px;
-    /* border-radius: 100px; */
 }
 
 button {
-    color: #ffffff;
-    background-color: #1e1e2e;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30%;
-    padding: 12px;
-    transition: all 0.4s ease;
-    border-radius: 0px;
+    transition: all 0.3s ease-in-out;
 }
 
-button:focus,
+/* button:focus, */
 button:active,
 button:hover {
-    background-color: #313244;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 30%;
+    background-size: 50%;
+    padding: 0 50 0 50px;
     font-weight: bold;
 }
 
 #lock {
     background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
-    border-radius: 10 0 0 0px;
-    border-top: 2px solid #b7bdf8;
-    border-left: 2px solid #b7bdf8;
 }
 
 #logout {
     background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
-    border-top: 2px solid #b7bdf8;
 }
 
 #suspend {
     background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
-    border-radius: 0 10 0 0px;
-    border-top: 2px solid #b7bdf8;
-    border-right: 2px solid #b7bdf8;
 }
 
 #hibernate {
     background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
-    border-radius: 0 0 0 10px;
-    border-left: 2px solid #b7bdf8;
-    border-bottom: 2px solid #b7bdf8;
 }
 
 #shutdown {
     background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
-    border-bottom: 2px solid #b7bdf8;
 }
 
 #reboot {
     background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-    border-radius: 0 0 10 0px;
-    border-bottom: 2px solid #b7bdf8;
-    border-right: 2px solid #b7bdf8;
 }
