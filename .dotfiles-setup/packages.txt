@@ -7,6 +7,7 @@ pamixer
 cliphist
 direnv
 xdg-desktop-portal-gnome
+papirus-icon-theme
 xdg-desktop-portal-gtk
 polkit-kde-agent
 fish
@@ -23,6 +24,7 @@ mpv
 gnome-tweaks
 bat
 kdeconnect
+catppuccin-cursors-mocha
 mpv-mpris
 sddm
 gtk-engine-murrine
@@ -37,5 +39,3 @@ ttf-nerd-fonts-symbols-mono
 noto-fonts-extra
 noto-fonts
 noto-fonts-cjk
-nvim
-neovide

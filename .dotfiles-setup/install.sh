@@ -15,12 +15,13 @@ rm -rf ~/yay
 
 # Install required packages
 if [[ -f ~/niri-dotfiles/.dotfiles-setup/packages.txt ]]; then
-    yay -S --needed --noconfirm $(< ~/.dotfiles-setup/packages.txt)
+    yay -S --needed --noconfirm $(< ~/niri-dotfiles/.dotfiles-setup/packages.txt)
 else
     echo "packages.txt not found"
     exit 1
 fi
 
+# Copy all the configs
 cp -rf ~/niri-dotfiles/.config/* ~/.config
 
 # Clone the catppuccin-gtk-theme
@@ -29,6 +30,10 @@ bash ~/themes-temp/themes/install.sh
 gsettings set org.gnome.desktop.interface gtk-theme 'Catppuccin-Dark'
 mkdir -p ~/.config/gtk-4.0
 cp -r ~/.themes/Catppuccin-Dark/gtk-4.0/* ~/.config/gtk-4.0/
+
+gsettings org.gnome.desktop.interface icon-theme "'Papirus-Dark'"
+gsettings org.gnome.desktop.interface gtk-theme "'Catppuccin-Dark'"
+gsettings org.gnome.desktop.interface cursor-theme "'catppuccin-mocha-dark-cursors'"
 
 # Cleanup themes-temp
 rm -rf ~/themes-temp
@@ -39,9 +44,15 @@ if ! systemctl is-active --quiet sddm.service; then
     sudo systemctl enable sddm.service
 fi
 
-# Start all the needed services
-for service in waybar avizo swaybg swayidle cliphist kdeconnect-indicator auto-hide-waybar plasma-polkit-agent; do
-  read -rp "Do you want to enable'$service.service'? [y/N] " answer
+# Startup applications
+for service in waybar avizo swaybg swayidle cliphist plasma-polkit-agent; do
+      systemctl --user add-wants niri.service "$service.service"
+      echo "'$service.service' enabled."
+done
+
+# Optional Startup applications
+for service in kdeconnect-indicator auto-hide-waybar wlsunset; do
+  read -rp "Do you want to enable '$service.service'? [y/N]" answer
   case "$answer" in
     [yY][eE][sS]|[yY])
       systemctl --user add-wants niri.service "$service.service"
