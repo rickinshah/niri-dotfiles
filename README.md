@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/d0600b3a-691e-4a65-914b-99ee8028b6bd
 # niri-dotfiles
 
 - Don't use the install.sh in the .dotfiles-setup directory. It is not complete yet and still work in progress.
