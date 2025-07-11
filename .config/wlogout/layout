@@ -12,7 +12,7 @@
 }
 {
     "label" : "logout",
-    "action" : "niri msg action quit",
+    "action" : "niri msg action quit -s",
     "text" : "Logout",
     "keybind" : "e"
 }
