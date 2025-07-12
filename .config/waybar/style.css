@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrainsMono Nerd Font;
+    font-family: "JetBrainsMono Nerd Font";
     font-size: 14px;
     color: #b4befe;
 }
@@ -166,8 +166,10 @@ button:hover {
 #custom-launcher:hover,
 #mpris:hover,
 #workspaces:hover,
+#privacy:hover,
 #tray:hover,
 #battery:hover,
+#custom-clipboard:hover,
 #battery.charging:hover,
 #pulseaudio:hover,
 #backlight:hover,
@@ -270,6 +272,13 @@ label:focus {
     background-color: #1e1e2e;
     border-radius: 15px;
     padding: 0 15px 0 12px;
+}
+
+#custom-clipboard {
+    font-family: "Font Awesome 6 Free";
+    background-color: #1e1e2e;
+    border-radius: 15px;
+    padding: 0 10px 0 10px;
 }
 
 #custom-launcher {

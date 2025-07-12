@@ -22,6 +22,7 @@
         // "custom/vkeyboard",
         "privacy",
         "idle_inhibitor",
+        "custom/clipboard",
         "pulseaudio",
         "backlight",
         "battery",
@@ -189,7 +190,7 @@
         "format-bluetooth-muted": " {volume}%",
         "format-muted": "X {volume}%",
         "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source-muted": " ",
         "format-icons": {
             "headphone": "",
             "phone": "",
@@ -217,7 +218,12 @@
     "custom/launcher": {
         "format": " ",
         "on-click": "pgrep fuzzel && pkill fuzzel || fuzzel",
-        "tooltip-format": "Menu"
+        "tooltip-format": "Launcher"
+    },
+    "custom/clipboard": {
+        "format": "",
+        "on-click": "pgrep fuzzel && pkill fuzzel || $HOME/.config/niri/scripts/cliphist-fuzzel-img",
+        "tooltip-format": "Clipboard"
     },
     "custom/power": {
         "format": "",
