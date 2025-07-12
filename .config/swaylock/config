@@ -1,5 +1,7 @@
 ignore-empty-password
 daemonize
+clock
+screenshots
 show-failed-attempts
 indicator-idle-visible
 line-uses-ring
@@ -20,3 +22,5 @@ ring-wrong-color=313244
 inside-wrong-color=313244
 text-wrong-color=b7bdf8
 text-clear-color=b7bdf8
+timestr=%H:%M
+effect-blur=8x3

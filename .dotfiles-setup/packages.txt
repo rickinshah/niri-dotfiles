@@ -13,7 +13,7 @@ polkit-kde-agent
 fish
 kitty
 fyi
-swaylock
+swaylock-effects
 swaync
 swayidle
 swaybg
