@@ -1,6 +1,6 @@
 # niri-dotfiles
 > [!NOTE]
-> New Niri dotfiles Repo: https://github.com/rickinshah/0xNiri
+> This Repo is moved to https://github.com/rickinshah/0xNiri
 
 # Current Look
 
